@@ -16,10 +16,13 @@ async function main(workbook: ExcelScript.Workbook) {
 
     for (let i = 0; i < productsCount; i++){
         let productName = productNames[i].toString().replace("|", "");
-        let query = promptStart;
+        
         if (productName === ""){
             continue;
         }
+        
+        let query = promptStart;
+        
         query += productName;
         query += promptEnd;
 
